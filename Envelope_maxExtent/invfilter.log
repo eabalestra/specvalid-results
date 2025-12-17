@@ -1,0 +1,96 @@
+INFO:logger_3072462442236532129:Running dynamic invariant filtering for Envelope_maxExtent.
+INFO:logger_3072462442236532129:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='results/paper/full_suite_10_/', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/Envelope_maxExtent/src/main/java/jts/Envelope.java', test_suite='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/Envelope_maxExtent/src/test/java/testers/EnvelopeTester0.java', test_driver='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/Envelope_maxExtent/src/test/java/testers/EnvelopeTesterDriver.java', buckets_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/Envelope_maxExtent/output/Envelope-maxExtent-specfuzzer-1-buckets.assertions', method='maxExtent', models_list=['GPT51', 'N_Llama3370Instruct', 'N_DeepSeekR1'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/Envelope_maxExtent/output/Envelope-maxExtent-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/Envelope_maxExtent/output/Envelope-maxExtent-specfuzzer-1.assertions')
+INFO:logger_3072462442236532129:Found 2 models with compiled tests: ['GPT51', 'N_DeepSeekR1']
+INFO:logger_3072462442236532129:Running invariant filtering for tests from model: GPT51
+INFO:logger_3072462442236532129:Found 2 tests to validate against
+INFO:logger_3072462442236532129:Project cleaned and compiled successfully.
+INFO:logger_3072462442236532129:Augmented files compiled successfully.
+INFO:logger_3072462442236532129:Run Dynamic Comparability Analysis from driver: EnvelopeTesterDriverAugmented
+INFO:logger_3072462442236532129:Run Chicory DTrace generation from driver: EnvelopeTesterDriverAugmented
+INFO:logger_3072462442236532129:Run Daikon Invariant Checker from driver: EnvelopeTesterDriverAugmented
+INFO:logger_3072462442236532129:Filtered specifications saved to results/paper/full_suite_10_/Envelope_maxExtent/test/by_model/GPT51/specs/interest-specs.csv
+
+INFO:logger_3072462442236532129:Specs from Envelope-maxExtent-specfuzzer-1.assertions: 645
+Filtered specs: 42
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 = Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) xor (Double_Variable_1 >= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 <= 1.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 <= Double_Variable_1) iff (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = 0.0) implies (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) iff (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 < 0.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = -1.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 > Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 != Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , return>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.maxx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 > 1.0) or (Double_Variable_1 != 1.0) ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) or (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( (Double_Variable_0 > Double_Variable_1) xor (Double_Variable_1 != Double_Variable_2) ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 % Double_Variable_2 ) holds for: <this.maxx , this.miny , return>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 * 1.0 ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + -1.0 ) holds for: <this.miny, return>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 + 0.0 ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.maxy, return>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 0.0 ) holds for: <this.maxx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - 1.0 ) holds for: <this.miny, return>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.maxx , this.maxy , return>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 / 1.0 ) holds for: <this.maxx, this.miny>
+  daikon.Quant.fuzzy.ne(this.maxx, this.miny)
+
+INFO:logger_3072462442236532129:Running invariant filtering for tests from model: N_DeepSeekR1
+INFO:logger_3072462442236532129:Found 12 tests to validate against
+INFO:logger_3072462442236532129:Project cleaned and compiled successfully.
+INFO:logger_3072462442236532129:Augmented files compiled successfully.
+INFO:logger_3072462442236532129:Run Dynamic Comparability Analysis from driver: EnvelopeTesterDriverAugmented
+INFO:logger_3072462442236532129:Run Chicory DTrace generation from driver: EnvelopeTesterDriverAugmented
+INFO:logger_3072462442236532129:Run Daikon Invariant Checker from driver: EnvelopeTesterDriverAugmented
+INFO:logger_3072462442236532129:Filtered specifications saved to results/paper/full_suite_10_/Envelope_maxExtent/test/by_model/N_DeepSeekR1/specs/interest-specs.csv
+
+INFO:logger_3072462442236532129:Specs from Envelope-maxExtent-specfuzzer-1.assertions: 645
+Filtered specs: 26
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) iff (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, return>
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxx>
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) or (Double_Variable_1 > 1.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 != 1.0) xor (Double_Variable_1 < -1.0) ) holds for: <this.minx, return>
+  FuzzedInvariant ( (Double_Variable_0 != Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 < Double_Variable_1) or (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) iff (Double_Variable_1 < 1.0) ) holds for: <this.minx, return>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, return>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.maxx>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) implies (Double_Variable_1 < 0.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 != 0.0) ) holds for: <this.minx, return>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 < Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , return>
+  FuzzedInvariant ( (Double_Variable_0 = 1.0) xor (Double_Variable_1 <= Double_Variable_2) ) holds for: <this.minx , this.miny , this.maxy>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 <= 0.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 = Double_Variable_1) implies (Double_Variable_1 = 0.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 >= 1.0) implies (Double_Variable_1 != 1.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( (Double_Variable_0 >= Double_Variable_1) implies (Double_Variable_1 < 1.0) ) holds for: <this.minx, this.miny>
+  FuzzedInvariant ( Double_Variable_0 != 1.0 ) holds for: this.minx
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - -1.0 ) holds for: <this.maxy, return>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxx , this.miny>
+  FuzzedInvariant ( Double_Variable_0 != Double_Variable_1 - Double_Variable_2 ) holds for: <this.minx , this.maxy , return>
+
+FALTA ARREGLAR O CORRER BUCKET
