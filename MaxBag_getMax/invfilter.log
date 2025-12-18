@@ -1,0 +1,19 @@
+INFO:logger_5692443679948397110:Running dynamic invariant filtering for MaxBag_getMax.
+INFO:logger_5692443679948397110:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='results/paper/full_suite_35_/', command='testgen', no_invs_filtering=False, reuse_tests=False, target_class_src='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/src/main/java/examples/MaxBag.java', test_suite='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/src/test/java/testers/MaxBagTester0.java', test_driver='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/src/test/java/testers/MaxBagTesterDriver.java', buckets_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/maxbag_getMax/output/MaxBag-getMax-specfuzzer-1-buckets.assertions', method='getMax', models_list=['GPT51'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/maxbag_getMax/output/MaxBag-getMax-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/maxbag_getMax/output/MaxBag-getMax-specfuzzer-1.assertions')
+INFO:logger_5692443679948397110:Found 1 models with compiled tests: ['GPT51']
+INFO:logger_5692443679948397110:Running invariant filtering for tests from model: GPT51
+INFO:logger_5692443679948397110:Found 5 tests to validate against
+INFO:logger_5692443679948397110:Project cleaned and compiled successfully.
+INFO:logger_5692443679948397110:Augmented files compiled successfully.
+INFO:logger_5692443679948397110:Run Dynamic Comparability Analysis from driver: MaxBagTesterDriverAugmented
+INFO:logger_5692443679948397110:Run Chicory DTrace generation from driver: MaxBagTesterDriverAugmented
+INFO:logger_5692443679948397110:Run Daikon Invariant Checker from driver: MaxBagTesterDriverAugmented
+ERROR:logger_5692443679948397110:❌ Error during invariant filtering: Error running Invariant Checker: Command '['java', '-Xmx8g', '-cp', '/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/libs/*:libs/*:/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/build/classes/java/main:/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/build/classes/java/test:/home/ldap/degiovanni@private.list.lu/specvalid/experiments/GAssert/subjects/maxbag_getMax/build/libs/*', 'daikon.tools.InvariantChecker', '--conf', '--serialiazed-objects', 'results/paper/full_suite_35_/MaxBag_getMax/test/by_model/GPT51/daikon/MaxBagTesterDriverAugmented-objects.xml', '/home/ldap/degiovanni@private.list.lu/specvalid/experiments/specfuzzer-subject-results/maxbag_getMax/output/MaxBag-getMax-specfuzzer-1.inv.gz', 'results/paper/full_suite_35_/MaxBag_getMax/test/by_model/GPT51/daikon/MaxBagTesterDriverAugmented.dtrace.gz']' returned non-zero exit status 1.
+
+---
+
+LLAMA TIRO QUE TODAS SON "OK"
+
+---
+
+FALTA TESTGEN DE DEEPSEEK
