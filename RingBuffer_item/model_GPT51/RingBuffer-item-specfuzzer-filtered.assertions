@@ -1,0 +1,4 @@
+\result.getClass().getName() == java.lang.String.class.getName()
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - 1 ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 + -1 ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <this.free, this.capacity_>
