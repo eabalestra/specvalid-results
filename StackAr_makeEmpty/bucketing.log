@@ -1,9 +1,0 @@
-INFO:logger_609854180458550236:Running bucketing (augmented) for StackAr_makeEmpty.
-INFO:logger_609854180458550236:Arguments: Namespace(list_llms=False, list_prompts=False, output_dir='output', command='testgen', no_invs_filtering=False, reuse_tests=True, target_class_src='/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/StackAr_makeEmpty/src/main/java/DataStructures/StackAr.java', test_suite='/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/StackAr_makeEmpty/src/test/java/testers/StackArTester0.java', test_driver='/home/inv/ebalestra/specvalid/experiments/GAssert/subjects/StackAr_makeEmpty/src/test/java/testers/StackArTesterDriver.java', buckets_assertions_file='/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/StackAr_makeEmpty/output/StackAr-makeEmpty-specfuzzer-1-buckets.assertions', method='makeEmpty', models_list=['GPT4oMini'], models_prefix=None, prompts_list=['General_V1'], specfuzzer_invs_file='/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/StackAr_makeEmpty/output/StackAr-makeEmpty-specfuzzer-1.inv.gz', specfuzzer_assertions_file='/home/inv/ebalestra/specvalid/experiments/specfuzzer-subject-results/StackAr_makeEmpty/output/StackAr-makeEmpty-specfuzzer-1.assertions')
-INFO:logger_609854180458550236:Found 3 models with compiled tests: ['GPT51', 'N_DeepSeekR1', 'N_Llama3370Instruct']
-INFO:logger_609854180458550236:Running bucketing for model: GPT51
-INFO:logger_609854180458550236:Loaded 5 compiled tests for model GPT51
-INFO:logger_609854180458550236:Cleaning project before updating suites
-INFO:logger_609854180458550236:Compiling augmented project
-INFO:logger_609854180458550236:Running DynComp and Chicory for driver testers.StackArTesterDriverAugmentedGPT51 (model GPT51)
-ERROR:logger_609854180458550236:❌ Error during bucketing: sequence item 5: expected str instance, PosixPath found
