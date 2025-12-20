@@ -1,8 +1,0 @@
-this._var66253 != null
-this._var587 != null
-this._var1457 != null
-daikon.Quant.eltsNotEqual(this._var66253, null)
-daikon.Quant.eltsEqual(daikon.Quant.typeArray(this._var66253), "java.lang.Integer")
-\result != null
-FuzzedInvariant ( no n : MaxBag._var66253 : n > Integer_Variable_0 ) holds for: <orig(this), return>
-FuzzedInvariant ( all n : MaxBag._var66253 : n <= Integer_Variable_0 ) holds for: <orig(this), return>

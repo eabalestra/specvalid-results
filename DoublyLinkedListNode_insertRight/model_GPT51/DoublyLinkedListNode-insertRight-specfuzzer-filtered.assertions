@@ -1,2 +1,0 @@
-n.right == \old(this.right.right.left)
-n.left == \old(this.right.left)
