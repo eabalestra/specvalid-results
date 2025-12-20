@@ -1,6 +1,7 @@
 FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 - 1 ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( Integer_Variable_0 != Integer_Variable_1 + -1 ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( Integer_Variable_0 != 1 ) holds for: return
+FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this._var23, this._var426>
@@ -12,15 +13,15 @@ FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 > 1) ) h
 FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 >= 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, return>
-FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 != 0) ) holds for: <this._var426, return>
-FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 != 0) ) holds for: <this._var23, this._var426>
+FuzzedInvariant ( (Integer_Variable_0 >= -1) or (Integer_Variable_1 != 0) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 >= 0) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, return>
-FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 >= 1) ) holds for: <this._var23, return>
-FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, return>
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 >= 1) ) holds for: <this._var426, return>
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var426, return>
+FuzzedInvariant ( (Integer_Variable_0 > 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != 1) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 != 1) ) holds for: <this._var23, return>
@@ -38,15 +39,17 @@ FuzzedInvariant ( (Integer_Variable_0 = 1) or (Integer_Variable_1 != 1) ) holds 
 FuzzedInvariant ( (Integer_Variable_0 = 1) or (Integer_Variable_1 != 1) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, this._var426>
+FuzzedInvariant ( (Integer_Variable_0 = 1) implies (Integer_Variable_1 != 0) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 = 0) implies (Integer_Variable_1 >= 0) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 = 0) implies (Integer_Variable_1 < 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > 1) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 > 1) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 = -1) ) holds for: <this._var426, return>
+FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 < 0) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 != -1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) implies (Integer_Variable_1 >= 0) ) holds for: <this._var23, return>
-FuzzedInvariant ( (Integer_Variable_0 <= 1) or (Integer_Variable_1 >= 1) ) holds for: <this._var23, return>
+FuzzedInvariant ( (Integer_Variable_0 <= 1) or (Integer_Variable_1 >= 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 != 1) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) implies (Integer_Variable_1 > 0) ) holds for: <this._var23, this._var426>
@@ -63,7 +66,7 @@ FuzzedInvariant ( (Integer_Variable_0 < 0) or (Integer_Variable_1 != -1) ) holds
 FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 != 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 != 1) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) xor (Integer_Variable_1 = 0) ) holds for: <this._var23, return>
-FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <this._var23, return>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 >= -1) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this._var23, return>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this._var23 , this._var426 , return>
@@ -79,3 +82,4 @@ FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Va
 FuzzedInvariant ( (Integer_Variable_0 != 1) or (Integer_Variable_1 > 1) ) holds for: <this._var426, return>
 FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 >= 1) ) holds for: <this._var23, this._var426>
 FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 >= 1) ) holds for: <this._var23, return>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 <= -1) ) holds for: <this._var426, return>

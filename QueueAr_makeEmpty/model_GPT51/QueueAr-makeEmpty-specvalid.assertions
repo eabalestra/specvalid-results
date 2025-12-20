@@ -17,7 +17,6 @@ this.back <= daikon.Quant.size(this.theArray)-1
 daikon.Quant.size(this.theArray) == \old(daikon.Quant.size(this.theArray))
 daikon.Quant.eltsEqual(this.theArray, null)
 daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.theArray), null)
-\old(this.front) <= daikon.Quant.size(this.theArray)
 \old(this.currentSize) <= daikon.Quant.size(this.theArray)
 FuzzedInvariant ( no n : QueueAr.theArray : n != null ) holds for: orig(this)
 FuzzedInvariant ( all n : QueueAr.theArray : n = null ) holds for: orig(this)
@@ -109,7 +108,6 @@ FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / 1 ) holds for: <ori
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / 1 ) holds for: <orig(this.currentSize), size(this.theArray[])>
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 / 1 ) holds for: <orig(this.back), size(this.theArray[])>
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.currentSize , this.back , orig(this.back)>
-FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - Integer_Variable_2 ) holds for: <orig(this.front) , this.back , orig(this.back)>
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - 0 ) holds for: <this.currentSize, size(this.theArray[])>
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - 0 ) holds for: <this.currentSize, orig(this.front)>
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 - 0 ) holds for: <this.currentSize, orig(this.currentSize)>
@@ -227,7 +225,6 @@ FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variabl
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 = Integer_Variable_2) ) holds for: <this.back , orig(this.back) , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 = 0) ) holds for: <this.back, orig(this.back)>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , this.back , size(this.theArray[])>
-FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , orig(this.front) , this.back>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , orig(this.front) , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , orig(this.currentSize) , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.currentSize , orig(this.back) , size(this.theArray[])>
@@ -409,7 +406,6 @@ FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Var
 FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.back , orig(this.back) , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , this.back , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , this.back , orig(this.currentSize)>
-FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , this.back , orig(this.back)>
 FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , orig(this.currentSize) , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.front) , orig(this.back) , size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 = 0) or (Integer_Variable_1 != Integer_Variable_2) ) holds for: <orig(this.currentSize) , orig(this.back) , size(this.theArray[])>
@@ -578,7 +574,6 @@ FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <this.currentSize, orig(this.currentSize)>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <this.currentSize, orig(this.back)>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <this.back, size(this.theArray[])>
-FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(this.front), this.back>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(this.front), size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(this.currentSize), size(this.theArray[])>
 FuzzedInvariant ( (Integer_Variable_0 < Integer_Variable_1) or (Integer_Variable_1 <= 1) ) holds for: <orig(this.back), size(this.theArray[])>

@@ -8,7 +8,6 @@ this.theArray.getClass().getName() == \old(this.theArray.getClass().getName())
 this.theArray == \old(this.theArray)
 this.theArray != null
 daikon.Quant.size(this.theArray) == \old(daikon.Quant.size(this.theArray))
-daikon.Quant.size(this.theArray) == 5 || daikon.Quant.size(this.theArray) == 10 || daikon.Quant.size(this.theArray) == 35
 daikon.Quant.memberOf(daikon.Quant.getElement_Object(this.theArray, \old(this.topOfStack)) , \old(this.theArray) )
 daikon.Quant.getElement_Object(this.theArray, \old(this.topOfStack)) == null
 \old(this.topOfStack) < daikon.Quant.size(this.theArray)-1
