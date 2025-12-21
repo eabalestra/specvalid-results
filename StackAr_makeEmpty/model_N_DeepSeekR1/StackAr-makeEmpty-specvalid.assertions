@@ -9,10 +9,7 @@ this.theArray == \old(this.theArray)
 this.theArray != null
 daikon.Quant.size(this.theArray) == \old(daikon.Quant.size(this.theArray))
 daikon.Quant.eltsEqual(this.theArray, null)
-daikon.Quant.eltsEqual(daikon.Quant.typeArray(this.theArray), null)
 FuzzedInvariant ( some n : StackAr.theArray : n = null ) holds for: this
-FuzzedInvariant ( no n : StackAr.theArray : n != null ) holds for: orig(this)
-FuzzedInvariant ( all n : StackAr.theArray : n = null ) holds for: orig(this)
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.topOfStack , orig(this.topOfStack) , size(this.theArray[])>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.topOfStack , orig(this.topOfStack) , size(this.theArray[])-1>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <this.topOfStack, size(this.theArray[])>
