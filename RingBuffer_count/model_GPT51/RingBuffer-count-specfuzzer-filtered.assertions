@@ -14,6 +14,7 @@ FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / 1 ) holds for: <thi
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / 1 ) holds for: <this.capacity_, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <this.start, this.free>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <this.start, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <this.free, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / -1 ) holds for: <this.capacity_, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>
@@ -30,6 +31,7 @@ FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * 1 ) holds for: <thi
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * 1 ) holds for: <this.capacity_, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <this.start, this.free>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <this.start, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <this.free, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 * -1 ) holds for: <this.capacity_, return>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 ) holds for: <this.free, return>
@@ -37,10 +39,13 @@ FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 ) holds for: <this.ca
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % -1 ) holds for: <this.start, this.free>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % -1 ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % -1 ) holds for: <this.start, return>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % -1 ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 % -1 ) holds for: <this.free, return>
 FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: this.start
 FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: this.free
 FuzzedInvariant ( Integer_Variable_0 >= 1 ) holds for: this.capacity_
 FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: this.start
+FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: this.free
 FuzzedInvariant ( Integer_Variable_0 >= 0 ) holds for: return
 FuzzedInvariant ( Integer_Variable_0 >= -1 ) holds for: return
 FuzzedInvariant ( Integer_Variable_0 >= #(RingBuffer.data) ) holds for: <orig(this), this.free>
@@ -50,6 +55,7 @@ FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / 1 ) holds for: <this
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <this.start, this.free>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <this.start, return>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <this.free, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <this.free, return>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 / -1 ) holds for: <this.capacity_, return>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 - Integer_Variable_2 ) holds for: <this.start , this.free , this.capacity_>
@@ -68,6 +74,7 @@ FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * 0 ) holds for: <this
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.start, this.free>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.start, return>
+FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.free, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.free, return>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 * -1 ) holds for: <this.capacity_, return>
 FuzzedInvariant ( Integer_Variable_0 > Integer_Variable_1 ) holds for: <this.free, return>
@@ -88,6 +95,7 @@ FuzzedInvariant ( Integer_Variable_0 > 0 ) holds for: this.start
 FuzzedInvariant ( Integer_Variable_0 > 0 ) holds for: this.free
 FuzzedInvariant ( Integer_Variable_0 > 0 ) holds for: this.capacity_
 FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: this.start
+FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: this.free
 FuzzedInvariant ( Integer_Variable_0 > -1 ) holds for: return
 FuzzedInvariant ( Integer_Variable_0 = Integer_Variable_1 - -1 ) holds for: <this.free, return>
 FuzzedInvariant ( Integer_Variable_0 = Integer_Variable_1 + 1 ) holds for: <this.free, return>
@@ -109,7 +117,6 @@ FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 ) holds for: <this.st
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 <= Integer_Variable_1 ) holds for: <this.free, this.capacity_>
 FuzzedInvariant ( Integer_Variable_0 <= #(RingBuffer.data) ) holds for: <orig(this), this.start>
-FuzzedInvariant ( Integer_Variable_0 <= #(RingBuffer.data) ) holds for: <orig(this), this.free>
 FuzzedInvariant ( Integer_Variable_0 <= #(RingBuffer.data) ) holds for: <orig(this), return>
 FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - -1 ) holds for: <this.start, this.free>
 FuzzedInvariant ( Integer_Variable_0 < Integer_Variable_1 - -1 ) holds for: <this.start, this.capacity_>
@@ -154,6 +161,7 @@ FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: this.start
 FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: this.free
 FuzzedInvariant ( Integer_Variable_0 != 0 ) holds for: this.capacity_
 FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.start
+FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: this.free
 FuzzedInvariant ( Integer_Variable_0 != -1 ) holds for: return
 FuzzedInvariant ( Integer_Variable_0 != #(RingBuffer.data) ) holds for: <orig(this), return>
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.start , this.free , return>
@@ -162,6 +170,7 @@ FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variabl
 FuzzedInvariant ( (Integer_Variable_0 >= Integer_Variable_1) or (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.start , this.free , this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.start , this.free , this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.start , this.capacity_ , return>
+FuzzedInvariant ( (Integer_Variable_0 >= 0) or (Integer_Variable_1 <= Integer_Variable_2) ) holds for: <this.free , this.capacity_ , return>
 FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.start , this.free , return>
 FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.start , this.capacity_ , return>
 FuzzedInvariant ( (Integer_Variable_0 >= 0) implies (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.free , this.capacity_ , return>
@@ -186,7 +195,6 @@ FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 > 0) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 > 0) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) or (Integer_Variable_1 > 0) ) holds for: <this.capacity_, return>
-FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 <= 1) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 <= 1) ) holds for: <this.free, this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 < -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 > Integer_Variable_1) implies (Integer_Variable_1 < -1) ) holds for: <this.start, this.capacity_>
@@ -213,12 +221,16 @@ FuzzedInvariant ( (Integer_Variable_0 > 0) or (Integer_Variable_1 < Integer_Vari
 FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.start , this.free , return>
 FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.start , this.capacity_ , return>
 FuzzedInvariant ( (Integer_Variable_0 > -1) xor (Integer_Variable_1 < Integer_Variable_2) ) holds for: <this.free , this.capacity_ , return>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 >= -1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 < -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 < -1) ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 < -1) ) holds for: <this.start, return>
+FuzzedInvariant ( (Integer_Variable_0 > -1) or (Integer_Variable_1 < -1) ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 > -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 > -1) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 > -1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 > -1) implies (Integer_Variable_1 > -1) ) holds for: <this.capacity_, return>
+FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) or (Integer_Variable_1 > -1) ) holds for: <this.capacity_, return>
@@ -231,6 +243,7 @@ FuzzedInvariant ( (Integer_Variable_0 = Integer_Variable_1) implies (Integer_Var
 FuzzedInvariant ( (Integer_Variable_0 = 1) xor (Integer_Variable_1 > 0) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 1) ) holds for: <this.start, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 = -1) implies (Integer_Variable_1 >= 1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) xor (Integer_Variable_1 > Integer_Variable_2) ) holds for: <this.start , this.free , this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.start , this.free , this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 <= Integer_Variable_1) or (Integer_Variable_1 >= Integer_Variable_2) ) holds for: <this.start , this.free , return>
@@ -283,9 +296,11 @@ FuzzedInvariant ( (Integer_Variable_0 < 0) xor (Integer_Variable_1 >= Integer_Va
 FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 = 1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 = 1) ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 = 1) ) holds for: <this.start, return>
+FuzzedInvariant ( (Integer_Variable_0 < 0) implies (Integer_Variable_1 = 1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 < -1) xor (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.start , this.free , return>
 FuzzedInvariant ( (Integer_Variable_0 < -1) xor (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.start , this.capacity_ , return>
 FuzzedInvariant ( (Integer_Variable_0 < -1) xor (Integer_Variable_1 != Integer_Variable_2) ) holds for: <this.free , this.capacity_ , return>
+FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 < -1) or (Integer_Variable_1 > -1) ) holds for: <this.capacity_, return>
@@ -293,6 +308,7 @@ FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variabl
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 <= 0) ) holds for: <this.capacity_, return>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 < -1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) or (Integer_Variable_1 < -1) ) holds for: <this.capacity_, return>
+FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 != Integer_Variable_1) implies (Integer_Variable_1 > -1) ) holds for: <this.capacity_, return>
@@ -303,6 +319,8 @@ FuzzedInvariant ( (Integer_Variable_0 != 1) implies (Integer_Variable_1 != Integ
 FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 <= -1) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 <= -1) ) holds for: <this.start, this.capacity_>
 FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 <= -1) ) holds for: <this.start, return>
+FuzzedInvariant ( (Integer_Variable_0 != -1) or (Integer_Variable_1 <= -1) ) holds for: <this.free, this.capacity_>
+FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= 0) ) holds for: <this.start, this.free>
 FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= 0) ) holds for: <this.start, return>
 FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= 0) ) holds for: <this.free, return>
 FuzzedInvariant ( (Integer_Variable_0 != -1) implies (Integer_Variable_1 >= 0) ) holds for: <this.capacity_, return>

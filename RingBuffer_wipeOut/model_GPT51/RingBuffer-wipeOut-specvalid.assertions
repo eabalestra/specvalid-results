@@ -11,7 +11,6 @@ this.data != null
 this.capacity_ == \old(this.capacity_)
 this.capacity_ == 8 || this.capacity_ == 10
 daikon.Quant.size(this.data) >= 1
-daikon.Quant.size(this.data) == 1 || daikon.Quant.size(this.data) == 2 || daikon.Quant.size(this.data) == 3
 daikon.Quant.pairwiseEqual(this.data, \old(this.data))
 FuzzedInvariant ( some n : RingBuffer.data : n = null ) holds for: this
 FuzzedInvariant ( Integer_Variable_0 >= Integer_Variable_1 / 1 ) holds for: <this.free, this.start>
